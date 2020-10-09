@@ -14,15 +14,18 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-//Users
-$app->get('/users/', 'UserController@index');
-$app->post('/users/', 'UserController@store');
-$app->get('/users/{user_id}', 'UserController@show');
-$app->put('/users/{user_id}', 'UserController@update');
-$app->delete('/users/{user_id}', 'UserController@destroy');
-//Tasks
-$app->get('/tasks','PostController@index');
-$app->post('/tasks','PostController@store');
-$app->get('/tasks/{post_id}','PostController@show');
-$app->put('/tasks/{post_id}', 'PostController@update');
-$app->delete('/tasks/{post_id}', 'PostController@destroy');
+$router->group(['prefix' => 'api'], function () use ($router) {
+    //Users
+    $router->get('/users/', 'UserController@index');
+    $router->post('/users/', 'UserController@store');
+    $router->get('/users/{user_id}', 'UserController@show');
+    $router->put('/users/{user_id}', 'UserController@update');
+    $router->delete('/users/{user_id}', 'UserController@destroy');
+
+    //Tasks
+    $router->get('/tasks', 'PostController@index');
+    $router->post('/tasks', 'PostController@store');
+    $router->get('/tasks/{post_id}', 'PostController@show');
+    $router->put('/tasks/{post_id}', 'PostController@update');
+    $router->delete('/tasks/{post_id}', 'PostController@destroy');
+});
