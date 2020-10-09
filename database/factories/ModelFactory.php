@@ -2,7 +2,6 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
 use Faker\Generator as Faker;
 
 /*
@@ -16,25 +15,23 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Todo::class, function (Faker\Generator $faker) {
-    return [
-        'title' => $faker->sentence(4),
-        'content' => $faker->paragraph(4),
-        'user_id' => mt_rand(1, 10)
-    ];
-});
-$factory->define(App\Category::class, function (Faker\Generator $faker) {
-    return [
-        'content' => $faker->paragraph(1),
-        'post_id' => mt_rand(1, 50),
-        'user_id' => mt_rand(1, 10)
-    ];
-});
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker $faker) {
     $hasher = app()->make('hash');
     return [
-        'name' => $faker->name,
+        'first_name' => $faker->firstName,
+        'last_name' => $faker->lastName,
         'email' => $faker->email,
+        'gender' => $faker->randomElement(["male", "female", "other"]),
         'password' => $hasher->make("secret")
+    ];
+});
+$factory->define(App\Task::class, function (Faker $faker) {
+    return [
+        'name' => $faker->sentence(4),
+        'description' => $faker->paragraph(4),
+        'datetime' => $faker->datetime(),
+        'status' => $faker->randomElement(["completed", "snoozed", "overdue"]),
+        'category' => $faker->word,
+        'user_id' => mt_rand(1, 10)
     ];
 });
