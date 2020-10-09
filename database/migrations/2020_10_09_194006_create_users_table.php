@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string("last_name");
             $table->string("email");
             $table->string("mobile_number");
+            $table->string("api_token");
             $table->enum("gender", ["male", "female", "other"]);
             $table->date("birthdate");
             $table->timestamps();
