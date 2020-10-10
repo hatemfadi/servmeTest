@@ -19,14 +19,14 @@ class TaskController extends Controller
         $rules = [
             'date' => 'date',
             'month' => 'integer|between:1,12',
-            'category' => 'string',
+            'category_id' => 'exists:App\Models\Category,id',
             'status' => 'string|in:completed,snoozed,overdue'
         ];
         $this->validate($request, $rules);
 
         $date = $request->get('date');
         $month = $request->get('month');
-        $category = $request->get('category');
+        $category_id = $request->get('category_id');
         $status = $request->get('status');
 
         $tasks = Task::where("user_id", $this->getUserId());
@@ -37,8 +37,8 @@ class TaskController extends Controller
             $tasks->whereMonth('datetime', '=', $month);
         }
 
-        if ($category) {
-            $tasks->where('category', $category);
+        if ($category_id) {
+            $tasks->where('category_id', $category_id);
         }
 
         if ($status) {
@@ -55,7 +55,7 @@ class TaskController extends Controller
             'datetime' => 'required|date',
             'status' => 'in:completed, snoozed, overdue',
             'description' => 'required|string',
-            'category' => 'required|string'
+            'category_id' => 'required|exists:App\Models\Category,id',
         ];
         $this->validate($request, $rules);
 
@@ -65,7 +65,7 @@ class TaskController extends Controller
             'user_id' => $this->getUserId(),
             'datetime' => $request->get('datetime'),
             'status' => $request->get('status') ? $request->get('status') : "snoozed",
-            'category' => $request->get('category')
+            'category_id' => $request->get('category_id')
         ]);
 
         return $this->success($task, 200);
@@ -93,7 +93,7 @@ class TaskController extends Controller
             'name' => 'string',
             'datetime' => 'date',
             'status' => 'in:completed, snoozed, overdue',
-            'category' => 'string'
+            'category_id' => 'exists:App\Models\Category,id',
         ];
         $this->validate($request, $rules);
 
@@ -106,8 +106,8 @@ class TaskController extends Controller
         if ($request->get("status")) {
             $task->status = $request->get("status");
         }
-        if ($request->get("category")) {
-            $task->category = $request->get("category");
+        if ($request->get("category_id")) {
+            $task->category_id = $request->get("category_id");
         }
         if ($request->get("description")) {
             $task->description = $request->get("description");
