@@ -19,7 +19,7 @@ class CreateTaskTable extends Migration
             $table->text("description");
             $table->dateTime("datetime");
             $table->enum("status", ["completed", "snoozed", "overdue"]);
-            $table->string("category");
+            $table->string("category_id");
             $table->integer("user_id");
             $table->timestamps();
         });
