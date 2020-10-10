@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Task;
+use App\Category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +19,8 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         Task::truncate();
         factory(User::class, 10)->create();
-        factory(Catgeory::class, 10)->create();
-        factory(Task::class, 50)->create();
+        factory(Category::class, 50)->create();
+        factory(Task::class, 500)->create();
         // Enable it back
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }

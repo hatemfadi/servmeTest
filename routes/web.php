@@ -26,4 +26,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/tasks/{task_id}', 'TaskController@show');
     $router->put('/tasks/{task_id}', 'TaskController@update');
     $router->delete('/tasks/{task_id}', 'TaskController@destroy');
+
+    //categories
+    $router->get('/categories', 'CategoryController@index');
+    $router->post('/categories', 'CategoryController@store');
+    $router->get('/categories/{category_id}', 'CategoryController@show');
+    $router->put('/categories/{category_id}', 'CategoryController@update');
+    $router->delete('/categories/{category_id}', 'CategoryController@destroy');
 });

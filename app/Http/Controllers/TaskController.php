@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Task;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -28,7 +27,6 @@ class TaskController extends Controller
         $month = $request->get('month');
         $category_id = $request->get('category_id');
         $status = $request->get('status');
-
         $tasks = Task::where("user_id", $this->getUserId());
 
         if ($date) {
