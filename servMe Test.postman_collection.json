@@ -1,0 +1,1350 @@
+{
+	"info": {
+		"_postman_id": "2c587320-f3fb-46bf-b2ee-e2be7cc358fe",
+		"name": "servMe Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Quae ut nemo et commodi doloremque",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "1998-6-5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "utadf",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "fficiis quo rem voluptatum vero ab molestiae. Labore occaecati aut qui. Est maxime quidem eos explicabo corporis recus",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All User Tasks ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/api/tasks?date=1995/08/31&month=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "1995/08/31"
+								},
+								{
+									"key": "month",
+									"value": "8"
+								}
+							]
+						},
+						"description": "Optional Filters Supported:\n- month: Integer from 1 to 12\n- date: String parsable by strtotime\n- category: String\n- status: value from [completed, snoozed, ovedurdue]"
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Task By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/tasks/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tasks",
+								"42"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Quae ut nemo et commodi doloremque",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "1998-6-5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "utadf",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "fadi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/tasks/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tasks",
+								"42"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGM1NWRjZGU0MTk5Zjg3YzQyODY2YjdjZmUyNDkwZDhkZmQzNDdkMzhlNjg5NTEyMjYwNWRmNTNiNjUwZDgwMDI4NjYwNjNlN2IzMjFkNzIiLCJpYXQiOjE2MDIyOTU4ODQsIm5iZiI6MTYwMjI5NTg4NCwiZXhwIjoxNjMzODMxODg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ds7UfxfAaZ4LpJs81oiDNvJy1ldWgBN2dHJDVXFucilLOIk06fRl6kqYtWvGMaGBjsLVfajKHHUeaG4FRI7fYVlxSOgNOyAUON16tM7puuUCPZmtrf-uStWLoN5Me0jzeuqR5iDU8zSYcguWxWWazDPXhd6WCFbA67WZ73s748WPNmU4lJuVaH5H2FYT7GKEacf4UfFU36c0IxTQAv_jl7P3bsQ3KqTmEob19E21E3gf1iLx0G1n2bc5b5gllGIZt9Y7p-2VP9846H9u6EMboo5iT7SO5fODK8932mvCViLzS3UK_JPbjQCDfqsECtC5Hu_UAqGqmENgY2CC1VAMgtzCuTrccvQWI5mD_-nD56GF1XqKWQAQrJM6W4py9o_uf7ZffeEj02JYt9ui26Iwvci9660gPlm7SM1wmv0RI1lTQpQ2-T9qGEzoYfTLm5d_nOQx56rewzarnmHIHsp2hjwoj4Sw-ygAhnzA512EEG5jeEwqYYE2lkmK_C04pWVdPs2_oB0X329jM9vjHxPLGneWnSW523qO4UriSrAtoOc2qOnWXW2B4t-6KnyPn725USHAqHqh_rfVs0wA-pcA6cQaWgUunVHMAubzOJVgsBHbP55gdEPFCYrgpno8DMrfQvh6_BMzcXC0xEU8YxSwd535roiIwgXrrpfrTV5zNWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Quae ut nemo et commodi doloremque",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "1998-6-5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "utadf",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "fadi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/tasks/49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tasks",
+								"49"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGM1NWRjZGU0MTk5Zjg3YzQyODY2YjdjZmUyNDkwZDhkZmQzNDdkMzhlNjg5NTEyMjYwNWRmNTNiNjUwZDgwMDI4NjYwNjNlN2IzMjFkNzIiLCJpYXQiOjE2MDIyOTU4ODQsIm5iZiI6MTYwMjI5NTg4NCwiZXhwIjoxNjMzODMxODg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ds7UfxfAaZ4LpJs81oiDNvJy1ldWgBN2dHJDVXFucilLOIk06fRl6kqYtWvGMaGBjsLVfajKHHUeaG4FRI7fYVlxSOgNOyAUON16tM7puuUCPZmtrf-uStWLoN5Me0jzeuqR5iDU8zSYcguWxWWazDPXhd6WCFbA67WZ73s748WPNmU4lJuVaH5H2FYT7GKEacf4UfFU36c0IxTQAv_jl7P3bsQ3KqTmEob19E21E3gf1iLx0G1n2bc5b5gllGIZt9Y7p-2VP9846H9u6EMboo5iT7SO5fODK8932mvCViLzS3UK_JPbjQCDfqsECtC5Hu_UAqGqmENgY2CC1VAMgtzCuTrccvQWI5mD_-nD56GF1XqKWQAQrJM6W4py9o_uf7ZffeEj02JYt9ui26Iwvci9660gPlm7SM1wmv0RI1lTQpQ2-T9qGEzoYfTLm5d_nOQx56rewzarnmHIHsp2hjwoj4Sw-ygAhnzA512EEG5jeEwqYYE2lkmK_C04pWVdPs2_oB0X329jM9vjHxPLGneWnSW523qO4UriSrAtoOc2qOnWXW2B4t-6KnyPn725USHAqHqh_rfVs0wA-pcA6cQaWgUunVHMAubzOJVgsBHbP55gdEPFCYrgpno8DMrfQvh6_BMzcXC0xEU8YxSwd535roiIwgXrrpfrTV5zNWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Quae",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All User Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNzE0Y2RiZjIzNzNjOGU3ZGIyZjRhNTUyZTNhMzY0OTUzOWM3M2NmZmFhOGZmNTMzMzk0M2VmMWEyOTRmMzE3OWU0ZGFhY2FkN2MyZjJkYjQiLCJpYXQiOjE2MDIzMjUxNjksIm5iZiI6MTYwMjMyNTE2OSwiZXhwIjoxNjMzODYxMTY5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jMJzt0b_JqyQ2Qh0q6hZqYMvmojNtAsF3FD52khNgRzwMnsscqAL3b8gihp677vmXoDLOKr7KM95LARBZSg5Da7Zy9gQeRTVxR4lU_f3eAnNWDrMO1dmTFKVnGGjy3t2Ej2U8yFxu8hVlYZxtpVGuYogal6TfF63nhhfCgn7WRDaEHLNrqhA4EB4xkzeYDCRWVnivrw9wvDOm3uqtcURMssbfZoDC-cAscP170WKvGqkYsFCqHRaQ4y6z9S9jF9k2Bu-otVxFRjsrXuAI90fy1xZzt8KMdw-I1bvBPv6FpZySEb5-zLZ-gk7_V3NaSG4G3VX4Iic7UM4BSfWMcH7e2N66m2hvr9Juvdazqd5Ir6q7S8vaPdbto-zs41ntt7dRU1Ed5Td3veMLqxfwaaUVERdfXbVrySwAAIfG24hyQ2AxfjlBjF-5YM0TVdW8lq2Iv3G6VNhqkXEH9s42jWGRSAvjkQ0oPBIONwpWiL9BAi-3JP22bVGqAg54ntAWBWYVLFiBdCA7qE1nhym-6vadEhOmgJt-J7NPTexdDa648T-cE1vAt3kdHre5hjN14Y3JhzQ8acSygb3zFWRjurXWo4LgvDoC1XuoyHpqKYf3aBCYvhQi0w-dgP4eypEzR3NHGW6V7MKs6T-Kkkenvt8LaFdy8ZieIMiGvvWjH4A6UQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Category By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGM1NWRjZGU0MTk5Zjg3YzQyODY2YjdjZmUyNDkwZDhkZmQzNDdkMzhlNjg5NTEyMjYwNWRmNTNiNjUwZDgwMDI4NjYwNjNlN2IzMjFkNzIiLCJpYXQiOjE2MDIyOTU4ODQsIm5iZiI6MTYwMjI5NTg4NCwiZXhwIjoxNjMzODMxODg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ds7UfxfAaZ4LpJs81oiDNvJy1ldWgBN2dHJDVXFucilLOIk06fRl6kqYtWvGMaGBjsLVfajKHHUeaG4FRI7fYVlxSOgNOyAUON16tM7puuUCPZmtrf-uStWLoN5Me0jzeuqR5iDU8zSYcguWxWWazDPXhd6WCFbA67WZ73s748WPNmU4lJuVaH5H2FYT7GKEacf4UfFU36c0IxTQAv_jl7P3bsQ3KqTmEob19E21E3gf1iLx0G1n2bc5b5gllGIZt9Y7p-2VP9846H9u6EMboo5iT7SO5fODK8932mvCViLzS3UK_JPbjQCDfqsECtC5Hu_UAqGqmENgY2CC1VAMgtzCuTrccvQWI5mD_-nD56GF1XqKWQAQrJM6W4py9o_uf7ZffeEj02JYt9ui26Iwvci9660gPlm7SM1wmv0RI1lTQpQ2-T9qGEzoYfTLm5d_nOQx56rewzarnmHIHsp2hjwoj4Sw-ygAhnzA512EEG5jeEwqYYE2lkmK_C04pWVdPs2_oB0X329jM9vjHxPLGneWnSW523qO4UriSrAtoOc2qOnWXW2B4t-6KnyPn725USHAqHqh_rfVs0wA-pcA6cQaWgUunVHMAubzOJVgsBHbP55gdEPFCYrgpno8DMrfQvh6_BMzcXC0xEU8YxSwd535roiIwgXrrpfrTV5zNWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/categories/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"categories",
+								"10"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Quae ut nemo et commodi doloremque",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/category/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"category",
+								"42"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGM1NWRjZGU0MTk5Zjg3YzQyODY2YjdjZmUyNDkwZDhkZmQzNDdkMzhlNjg5NTEyMjYwNWRmNTNiNjUwZDgwMDI4NjYwNjNlN2IzMjFkNzIiLCJpYXQiOjE2MDIyOTU4ODQsIm5iZiI6MTYwMjI5NTg4NCwiZXhwIjoxNjMzODMxODg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ds7UfxfAaZ4LpJs81oiDNvJy1ldWgBN2dHJDVXFucilLOIk06fRl6kqYtWvGMaGBjsLVfajKHHUeaG4FRI7fYVlxSOgNOyAUON16tM7puuUCPZmtrf-uStWLoN5Me0jzeuqR5iDU8zSYcguWxWWazDPXhd6WCFbA67WZ73s748WPNmU4lJuVaH5H2FYT7GKEacf4UfFU36c0IxTQAv_jl7P3bsQ3KqTmEob19E21E3gf1iLx0G1n2bc5b5gllGIZt9Y7p-2VP9846H9u6EMboo5iT7SO5fODK8932mvCViLzS3UK_JPbjQCDfqsECtC5Hu_UAqGqmENgY2CC1VAMgtzCuTrccvQWI5mD_-nD56GF1XqKWQAQrJM6W4py9o_uf7ZffeEj02JYt9ui26Iwvci9660gPlm7SM1wmv0RI1lTQpQ2-T9qGEzoYfTLm5d_nOQx56rewzarnmHIHsp2hjwoj4Sw-ygAhnzA512EEG5jeEwqYYE2lkmK_C04pWVdPs2_oB0X329jM9vjHxPLGneWnSW523qO4UriSrAtoOc2qOnWXW2B4t-6KnyPn725USHAqHqh_rfVs0wA-pcA6cQaWgUunVHMAubzOJVgsBHbP55gdEPFCYrgpno8DMrfQvh6_BMzcXC0xEU8YxSwd535roiIwgXrrpfrTV5zNWM"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/categories/49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"categories",
+								"49"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User Tasks ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjA2NjVmMjUxYjUzYjAwN2Q2ODk0MmU1NDg0OTZlN2JmMWJiZGZiYmVmZTgxNmQ3YmMyYmYxZmQ2MGZjNjI5YTgxMmQ1MzhmNTUxMDM1MzAiLCJpYXQiOjE2MDIyODQ0OTcsIm5iZiI6MTYwMjI4NDQ5NywiZXhwIjoxNjMzODIwNDk3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.K5S_1nhDGSveLMwPrkaVF9_ZcJkTHrdVf2a-P9seiAuCN9e09GUYMixJSlxLjLwBx7ndX6cTJDhZTHx_dKCBO_OSUqG-B6XpRYHSvNA4M2_gjAl5_wqAiL2AO9n3DEuMP1SNNYQAnRY9kGUk2KKZ5A4SvmrbuHzEjds5b5W2w7DB_H32nANeu53dJdIrSooHFelw_UbTRGU8uppWaUx5d3P4oWl8NZhQD3EEuHddxEc1cmBxE_P_fUgcPmQK3tGMkje9899k5uvC7r-S3dgaY7rA0MgtqbLmfSqhaj69t581u_5LykJbf8t4f5LTo0i3SLxN_wMiHRpV1cUPmy9Ij7sViJjmZOCDIitGLY88VEv3lqjRdvlYhTCIASEjpRPdYqFL86rVZveR2bAEf_vOYodfVuFeeclNALrrr0CqgaYRPGx4VFtiXaocs5kzGlYW5J11u9Q6MoBC64ryUd0gl33TmFpTBgTdRRj0a7V5DK-fjdcrvsVdw1vg-JFE381P4i8N5M26EfHW3EYkuNSxxD0esNU7XveYE3WnULyLlNMLqQxdDIEMJZvREXrXbtp_2Zs_qz2ASxZ4d1SVcCe5Z6trBW_ssPcPo4f8zXQmSlGiEtY6TP8cWvjq-4AcOfZ-zGcFLspbcgw6c7litcsu7VWrUgPMvoTChR0jrDvhYVU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/tasks?date=1995/08/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "1995/08/31"
+										},
+										{
+											"key": "month",
+											"value": "8",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 00:32:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 46,\n                \"name\": \"Ducimus a laborum.\",\n                \"description\": \"Omnis quo sunt est est quia eum. Iste in exercitationem placeat. Tempora quae quia voluptatibus sed aut inventore. Ipsam quibusdam officiis tempore recusandae.\",\n                \"datetime\": \"1995-08-31 17:07:46\",\n                \"status\": \"completed\",\n                \"category\": \"distinctio\",\n                \"user_id\": 6\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8001/api/tasks?page=1\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8001/api/tasks\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNzE0Y2RiZjIzNzNjOGU3ZGIyZjRhNTUyZTNhMzY0OTUzOWM3M2NmZmFhOGZmNTMzMzk0M2VmMWEyOTRmMzE3OWU0ZGFhY2FkN2MyZjJkYjQiLCJpYXQiOjE2MDIzMjUxNjksIm5iZiI6MTYwMjMyNTE2OSwiZXhwIjoxNjMzODYxMTY5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jMJzt0b_JqyQ2Qh0q6hZqYMvmojNtAsF3FD52khNgRzwMnsscqAL3b8gihp677vmXoDLOKr7KM95LARBZSg5Da7Zy9gQeRTVxR4lU_f3eAnNWDrMO1dmTFKVnGGjy3t2Ej2U8yFxu8hVlYZxtpVGuYogal6TfF63nhhfCgn7WRDaEHLNrqhA4EB4xkzeYDCRWVnivrw9wvDOm3uqtcURMssbfZoDC-cAscP170WKvGqkYsFCqHRaQ4y6z9S9jF9k2Bu-otVxFRjsrXuAI90fy1xZzt8KMdw-I1bvBPv6FpZySEb5-zLZ-gk7_V3NaSG4G3VX4Iic7UM4BSfWMcH7e2N66m2hvr9Juvdazqd5Ir6q7S8vaPdbto-zs41ntt7dRU1Ed5Td3veMLqxfwaaUVERdfXbVrySwAAIfG24hyQ2AxfjlBjF-5YM0TVdW8lq2Iv3G6VNhqkXEH9s42jWGRSAvjkQ0oPBIONwpWiL9BAi-3JP22bVGqAg54ntAWBWYVLFiBdCA7qE1nhym-6vadEhOmgJt-J7NPTexdDa648T-cE1vAt3kdHre5hjN14Y3JhzQ8acSygb3zFWRjurXWo4LgvDoC1XuoyHpqKYf3aBCYvhQi0w-dgP4eypEzR3NHGW6V7MKs6T-Kkkenvt8LaFdy8ZieIMiGvvWjH4A6UQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "uhearzog@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "joany.wisozk@lind.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "Xu5l0DOf4ALZoeQCsSAYx1T6yWKHsrUhKl8723Eh",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
