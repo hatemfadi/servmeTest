@@ -32,21 +32,6 @@ class UserController extends Controller
         return $this->success("The user with id {$user->id} has been created", 200);
     }
 
-    public function show()
-    {
-        //
-    }
-
-    public function update()
-    {
-        //
-    }
-
-    public function destroy()
-    {
-        //
-    }
-
     public function validateRequest(Request $request)
     {
         $rules = [
