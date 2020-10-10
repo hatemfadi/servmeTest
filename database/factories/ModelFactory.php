@@ -31,7 +31,13 @@ $factory->define(App\Task::class, function (Faker $faker) {
         'description' => $faker->paragraph(4),
         'datetime' => $faker->datetime(),
         'status' => $faker->randomElement(["completed", "snoozed", "overdue"]),
-        'category' => $faker->word,
+        'category_id' => mt_rand(1, 10),
+        'user_id' => mt_rand(1, 10)
+    ];
+});
+$factory->define(App\Category::class, function (Faker $faker) {
+    return [
+        'name' => $faker->word(4),
         'user_id' => mt_rand(1, 10)
     ];
 });

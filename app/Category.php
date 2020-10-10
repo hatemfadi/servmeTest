@@ -4,21 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Category extends Model
 {
-    protected $table = 'task';
+    protected $table = 'category';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        "name", "description", "datetime", "status", "category", "user_id"
+        "name", "user_id"
     ];
+
     protected $hidden = ['created_at', 'updated_at', 'user_id'];
 
-    public function category()
+    public function tasks()
     {
-        return $this->belongsTo('App\Category', 'category_id','id');
+        return $this->hasMany('App\Task', 'category_id','id');
     }
 }
