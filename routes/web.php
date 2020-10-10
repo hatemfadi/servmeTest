@@ -23,9 +23,9 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('/users/{user_id}', 'UserController@destroy');
 
     //Tasks
-    $router->get('/tasks', 'PostController@index');
-    $router->post('/tasks', 'PostController@store');
-    $router->get('/tasks/{post_id}', 'PostController@show');
-    $router->put('/tasks/{post_id}', 'PostController@update');
-    $router->delete('/tasks/{post_id}', 'PostController@destroy');
+    $router->get('/tasks', 'TaskController@index');
+    $router->post('/tasks', 'TaskController@store');
+    $router->get('/tasks/{task_id}', 'TaskController@show');
+    $router->put('/tasks/{task_id}', 'TaskController@update');
+    $router->delete('/tasks/{task_id}', 'TaskController@destroy');
 });
