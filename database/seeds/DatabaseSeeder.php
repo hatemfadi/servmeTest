@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         Task::truncate();
         factory(User::class, 10)->create();
+        factory(Catgeory::class, 10)->create();
         factory(Task::class, 50)->create();
         // Enable it back
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
