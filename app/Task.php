@@ -13,7 +13,7 @@ class Task extends Model
      * @var array
      */
     protected $fillable = [
-        "name", "description", "datetime", "status", "category"
+        "name", "description", "datetime", "status", "category", "user_id"
     ];
     protected $hidden   = ['created_at', 'updated_at'];
 

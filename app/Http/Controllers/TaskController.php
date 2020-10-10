@@ -18,30 +18,44 @@ class TaskController extends Controller
     {
         $rules = [
             'date' => 'date',
-            'month' => 'integer|between:1,12'
+            'month' => 'integer|between:1,12',
+            'category' => 'string',
+            'status' => 'string|in:completed,snoozed,overdue'
         ];
         $this->validate($request, $rules);
 
         $date = $request->get('date');
         $month = $request->get('month');
+        $category = $request->get('category');
+        $status = $request->get('status');
 
         $tasks = Task::where("user_id", $this->getUserId());
+
         if ($date) {
             $tasks->whereDate('datetime', '=', $date);
         } else if ($month) {
             $tasks->whereMonth('datetime', '=', $month);
         }
+
+        if ($category) {
+            $tasks->where('category', $category);
+        }
+
+        if ($status) {
+            $tasks->where('status', $status);
+        }
+
         return $this->success($tasks->paginate(), 200);
     }
 
     public function store(Request $request)
     {
-
         $rules = [
-            'name' => 'string',
-            'datetime' => 'date',
+            'name' => 'required|string',
+            'datetime' => 'required|date',
             'status' => 'in:completed, snoozed, overdue',
-            'category' => 'string'
+            'description' => 'required|string',
+            'category' => 'required|string'
         ];
         $this->validate($request, $rules);
 
@@ -50,65 +64,70 @@ class TaskController extends Controller
             'description' => $request->get('description'),
             'user_id' => $this->getUserId(),
             'datetime' => $request->get('datetime'),
-            'status' => $request->get('status'),
+            'status' => $request->get('status') ? $request->get('status') : "snoozed",
             'category' => $request->get('category')
         ]);
 
-        return $this->success("The task with with id {$task->id} has been created", 201);
+        return $this->success($task, 200);
     }
 
-    public function show($id)
+    public function show($task_id)
     {
-
-        $task = Task::find($id);
+        $task = Task::find($task_id);
 
         if (!$task) {
-            return $this->error("The task with {$id} doesn't exist", 404);
+            return $this->error("The task with {$task_id} doesn't exist", 404);
         }
 
         return $this->success($task, 200);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $task_id)
     {
-
-        $task = Task::find($id);
+        $task = Task::find($task_id);
 
         if (!$task) {
-            return $this->error("The task with {$id} doesn't exist", 404);
+            return $this->error("The task with {$task_id} doesn't exist", 404);
         }
-        $rules = [];
+        $rules = [
+            'name' => 'string',
+            'datetime' => 'date',
+            'status' => 'in:completed, snoozed, overdue',
+            'category' => 'string'
+        ];
         $this->validate($request, $rules);
 
-        $task->title = $request->get('title');
-        $task->content = $request->get('content');
-        $task->user_id = $this->getUserId();
-
+        if ($request->get("name")) {
+            $task->name = $request->get("name");
+        }
+        if ($request->get("datetime")) {
+            $task->datetime = $request->get("datetime");
+        }
+        if ($request->get("status")) {
+            $task->status = $request->get("status");
+        }
+        if ($request->get("category")) {
+            $task->category = $request->get("category");
+        }
+        if ($request->get("description")) {
+            $task->description = $request->get("description");
+        }
         $task->save();
 
-        return $this->success("The task with with id {$task->id} has been updated", 200);
+        return $this->success($task, 200);
     }
 
-    public function destroy($id)
+    public function destroy($task_id)
     {
 
-        $task = Task::find($id);
+        $task = Task::find($task_id);
 
         if (!$task) {
-            return $this->error("The task with {$id} doesn't exist", 404);
+            return $this->error("The task with {$task_id} doesn't exist", 404);
         }
 
         $task->delete();
 
-        return $this->success("The task with with id {$id} has been deleted along with it's comments", 200);
-    }
-
-    public function isAuthorized(Request $request)
-    {
-
-        $resource = "tasks";
-        $task = Task::find($this->getArgs($request)["task_id"]);
-
-        return $this->authorizeUser($request, $resource, $task);
+        return $this->success("The task with with id {$task_id} has been deleted", 200);
     }
 }
